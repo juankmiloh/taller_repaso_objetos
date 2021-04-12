@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="es">
     <head>
         <title>Productos</title>
     </head>
+
     <body>
         <table border="1">
             <tr>
-                <th>Grupo</th><th>Imagen</th><th>Descripción</th>
+                <th>Grupo</th><th>Imagen</th><th>Descripcion</th>
             </tr>
             {% for p in productos %}
                 <tr>
@@ -15,8 +17,14 @@
                     <td>{{ p.descripcion }}</td>
                 </tr>
             {% endfor %}
+            {% for c in cuerpos %}
+            <tr>
+                <td>{{ c.grupo }}</td>
+                <td><img src="static/{{ c.imagen }}" alt="{{ c.imagen }}" width="150px"></td>
+                <td>{{ c.descripcion }}</td>
+            </tr>
+            {% endfor %}
         </table>
 
     </body>
-
 </html>
