@@ -4,23 +4,29 @@ class Producto:
         self.descripcion = ""
         self.grupo = ""
 
+# ---------------------------
+# -- Armas
+# ---------------------------
+
 class Arma(Producto):
     def __init__(self):
         Producto.__init__(self)
-        self.mango = ""
 
 class ArmaHumanos(Arma):
     def __init__(self):
         self.grupo = "Humanos"
         self.imagen = "imagenes/humanos/arma.png"
-        self.descripcion = "arma de los humanos"
-        self.mango = True
+        self.descripcion = "Arma de los humanos"
 
 class ArmaOrcos(Arma):
     def __init__(self):
         self.grupo = "Orcos"
         self.imagen = "imagenes/orcos/arma.png"
-        self.descripcion = "arma de los orcos"
+        self.descripcion = "Arma de los orcos"
+
+# ---------------------------
+# -- Escudos
+# ---------------------------
 
 class Escudo(Producto):
     def __init__(self):
@@ -30,13 +36,17 @@ class EscudoHumanos(Escudo):
     def __init__(self):
         self.grupo = "Humanos"
         self.imagen = "imagenes/humanos/escudo.png"
-        self.descripcion = "escudo de los humanos"
+        self.descripcion = "Escudo de los humanos"
 
 class EscudoOrcos(Escudo):
     def __init__(self):
         self.grupo = "Orcos"
         self.imagen = "imagenes/orcos/escudo.png"
-        self.descripcion = "escudo de los orcos"
+        self.descripcion = "Escudo de los orcos"
+
+# ---------------------------
+# -- Monturas
+# ---------------------------
 
 class Montura(Producto):
     def __init__(self):
@@ -46,36 +56,31 @@ class MonturaHumanos(Montura):
     def __init__(self):
         self.grupo = "Humanos"
         self.imagen = "imagenes/humanos/montura.png"
-        self.descripcion = "montura humanos"
+        self.descripcion = "Montura de los humanos"
 
 class MonturaOrcos(Montura):
     def __init__(self):
         self.grupo = "Orcos"
         self.imagen = "imagenes/orcos/montura.jpg"
-        self.descripcion = "montura orcos"
+        self.descripcion = "Montura de los orcos"
 
-# --------------------
-# Cuerpos
-# --------------------
+# ---------------------------
+# -- Cuerpos
+# ---------------------------
 
-class Cuerpo:
+class Cuerpo(Producto):
     def __init__(self):
-        self.grupo = ""
-        self.descripcion = ""
-        self.imagen = ""
+        Producto.__init__(self)
 
-class esqueleto(Cuerpo):
-    def __init__(self):
-        Cuerpo.__init__(self)
-
-class CuerpoHumanos(esqueleto):
+class CuerpoHumanos(Cuerpo):
     def __init__(self):
         self.grupo = "Humanos"
-        self.descripcion = "Cuerpo humanos"
+        self.descripcion = "Cuerpo de los humanos"
         self.imagen = "imagenes/humanos/cuerpo.png"
 
-class CuerpoOrcos(esqueleto):
+class CuerpoOrcos(Cuerpo):
     def __init__(self):
         self.grupo = "Orcos"
-        self.descripcion = "Cuerpo orcos"
+        self.descripcion = "Cuerpo de los orcos"
         self.imagen = "imagenes/orcos/cuerpo.png"
+

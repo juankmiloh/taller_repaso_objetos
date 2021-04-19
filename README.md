@@ -7,5 +7,8 @@ Código: 20211099031
 - Herencia
 - Abierto / Cerrado
 - Inversión de dependencias
+- Responsabilidad única
+- Sustitución de liskov
 > Patrones de diseño de software utilizados:
 - Abstract factory
+- Decorator
